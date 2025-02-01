@@ -1,37 +1,47 @@
 let age = 25;
-let isStudent = true;
+const isStudent = true;
 const hasJob = true;
 
 
-switch (true) {
-    case (age < 18):
+let category;
+if (age < 18) {
+    category = "school";
+} else if (isStudent && !hasJob) {
+    category = "student_no_job";
+} else if (isStudent && hasJob) {
+    category = "student_with_job";
+} else if (!isStudent && hasJob) {
+    category = "worker";
+} else {
+    category = "unemployed";
+}
+
+switch (category) {
+    case "school":
         console.log("Ви ще школяр");
         break;
-    case (isStudent && !hasJob):
+    case "student_no_job":
         console.log("Ви студент без роботи");
         break;
-    case (isStudent && hasJob):
+    case "student_with_job":
         console.log("Ви студент і працюєте");
         break;
-    case (!isStudent && hasJob):
-        console.log("Ви працюєте і не навчаєтесь");
+    case "worker":
+        console.log("Ви не студент і працюєте");
         break;
     default:
         console.log("Ви не студент і не працюєте");
-        break;
 }
 
-age = 19; // Для перевірки case 2
-isStudent = false; // Для перевірки case 2
-
-switch (true) {
-    case (age >= 18 && isStudent):
-        console.log("Ви повнолітній студент");
-        break;
-    case (age >= 18 && !isStudent):
-        console.log("Ви повнолітній і не студент");
-        break;
-    default:
-        console.log("Ви ще неповнолітній");
-        break;
+if (age >= 18) {
+    switch (isStudent) {
+        case true:
+            console.log("Ви повнолітній студент");
+            break;
+        case false:
+            console.log("Ви повнолітній і не студент");
+            break;
+    }
+} else {
+    console.log("Ви ще неповнолітній");
 }
