@@ -1,4 +1,4 @@
-let age = 25;
+const age = 25;
 const isStudent = true;
 const hasJob = true;
 
