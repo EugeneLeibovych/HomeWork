@@ -1,6 +1,6 @@
 let age = 25;
 let isStudent = true;
-let hasJob = true;
+const hasJob = true;
 
 
 switch (true) {

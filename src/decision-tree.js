@@ -1,6 +1,6 @@
 let age = 25;
-let isStudent = true;
-let hasJob = true;
+const isStudent = true;
+const hasJob = true;
 
 if (age >= 18) {
     console.log("Ви повнолітній");
@@ -24,7 +24,6 @@ if (age < 18) {
 }
 
 
-
 if (age >= 18) {
     if (isStudent) {
         console.log("Ви повнолітній студент");
@@ -35,4 +34,3 @@ if (age >= 18) {
     console.log("Ви ще неповнолітній");
 }
 
-age=12;
