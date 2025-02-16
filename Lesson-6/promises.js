@@ -5,6 +5,10 @@ function fetchData(url) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
             }
             return response.json();
+        })
+        .catch(error => {
+            console.error ("Error receiving data", error);
+            throw error;
         });
 }
 
@@ -13,7 +17,12 @@ function processData(data) {
 
 }
 
+function fetchAndProcessData(url) {
+    fetchData(url)
+        .then(data => processData(data))
+        .catch(error => console.error("Error in fetchAndProcessData:", error));
+}
+
 const apiUrl = "https://jsonplaceholder.typicode.com/posts/1";
-fetchData(apiUrl)
-    .then(data => processData(data))
-    .catch(error => console.error("Error receiving data:", error));
+fetchAndProcessData(apiUrl);
+
