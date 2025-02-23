@@ -20,4 +20,6 @@ async function main(): Promise<void> {
     }
 }
 
-main();
+main()
+    .then(() => console.log('Completed'))
+    .catch((err) => console.log('Error', err));
