@@ -4,6 +4,9 @@ export interface IGame {
     play(): void;
 }
 
+export interface IBallGame {
+    getBall(): void;
+}
 
 abstract class Game implements IGame {
     protected title: string;
@@ -27,12 +30,15 @@ class Chess extends Game {
 }
 
 
-class Football extends Game {
+class Football extends Game implements IBallGame {
     public constructor() {
         super('Football');
     }
 
     public play(): void {
         console.log(`Playing '${this.title}'.`);
+    }
+    public getBall(): void {
+        console.log('Getting to play football.');
     }
 }
