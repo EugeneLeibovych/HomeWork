@@ -24,8 +24,8 @@ class Chess extends Game {
         super('Chess');
     }
 
-    public play(): void {
-        console.log(`Playing '${this.title}'.`);
+    public play(): string {
+        return `Playing '${this.title}'.`;
     }
 }
 
@@ -35,10 +35,10 @@ class Football extends Game implements IBallGame {
         super('Football');
     }
 
-    public play(): void {
-        console.log(`Playing '${this.title}'.`);
+    public play(): string {
+        return `Playing '${this.title}'.`;
     }
-    public getBall(): void {
-        console.log('Getting to play football.');
+    public getBall(): string {
+        return 'Getting to play football.';
     }
 }

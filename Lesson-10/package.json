@@ -7,7 +7,7 @@
     "lint": "eslint src/",
     "lint:fix": "npm run lint -- --fix",
     "build": "npm run lint && tsc --build",
-    "test": "npx eslint . && mocha -r ts-node/register mocha/tests/**/*.spec.ts"
+    "test": "npx eslint . && mocha mocha/tests/**/*.spec.ts"
   },
   "author": "",
   "license": "ISC",
