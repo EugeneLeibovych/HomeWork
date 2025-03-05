@@ -32,6 +32,7 @@ describe('Mocha tests for Chess and Football classes', () => {
         it('should call getBall method without throwing errors', () => {
             const football = new Football();
             expect(() => football.getBall()).to.not.throw();
+            expect(football.getBall()).to.equal('Getting to play football.');
         });
     });
 });
