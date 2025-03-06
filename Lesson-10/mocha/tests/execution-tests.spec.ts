@@ -2,21 +2,21 @@ import { expect } from 'chai';
 import { Chess, Football } from '../../classes';
 import { startGame, playBallGame } from '../../execution';
 
-describe('Mocha tests for Chess and Football classes', () => {
+describe('Mocha tests for Chess and Football classes Execution', () => {
     describe('startGame function', () => {
-        it('should call play method of Chess', async () => {
+        it('should call play method of Chess', () => {
             const chess = new Chess();
-            expect(() => startGame(chess)).not.to.throw();
+            expect(startGame(chess)).to.equal('Playing \'Chess\'.');
         });
-        it('should call play method of Football', async () => {
+        it('should call play method of Football', () => {
             const football = new Football();
-            expect(() => startGame(football)).not.to.throw();
+            expect(startGame(football)).to.equal('Playing \'Football\'.');
         });
     });
     describe('playBallGame function', () => {
-        it('should call getBall method of Football', async () => {
+        it('should call getBall method of Football', () => {
             const football = new Football();
-            expect(() => playBallGame(football)).not.to.throw();
+            expect(playBallGame(football)).to.equal('Getting to play football.');
         });
     });
 });

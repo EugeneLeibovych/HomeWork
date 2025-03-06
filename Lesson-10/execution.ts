@@ -1,11 +1,11 @@
 import { Chess, Football, IGame, IBallGame } from './classes';
 
-export function startGame(game: IGame): void {
-    game.play();
+export function startGame(game: IGame): string {
+    return game.play();
 }
 
-export function playBallGame(game: IBallGame): void {
-    game.getBall();
+export function playBallGame(game: IBallGame): string {
+    return game.getBall();
 }
 
 const chess = new Chess();

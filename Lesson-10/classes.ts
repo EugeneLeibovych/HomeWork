@@ -1,11 +1,11 @@
 export {Chess, Football};
 
 export interface IGame {
-    play(): void;
+    play(): string;
 }
 
 export interface IBallGame {
-    getBall(): void;
+    getBall(): string;
 }
 
 abstract class Game implements IGame {
@@ -15,7 +15,7 @@ abstract class Game implements IGame {
         this.title = title;
     }
 
-    public abstract play(): void;
+    public abstract play(): string;
 }
 
 
